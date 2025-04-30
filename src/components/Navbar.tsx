@@ -12,7 +12,7 @@ const navLinks = [
   { title: "About Us", href: "/about" },
   { title: "Contact Us", href: "/contact" },
   { title: "Services", href: "/services" },
-  { title: "Blog", href: "/blog" },
+  { title: "Register", href: "/register-auth" },
 ];
 
 export default function Navbar() {
