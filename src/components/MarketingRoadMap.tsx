@@ -19,16 +19,16 @@ export default function MarketingRoadmap() {
       {/* Roadmap Steps */}
       <div className="relative mt-16 w-full max-w-5xl flex flex-col items-center">
         {/* Vertical Line */}
-        <div className="absolute h-full w-1 bg-lime-400 left-1/2 transform -translate-x-1/2"></div>
+        <div className="absolute h-full w-1 bg-[#99FF33] left-1/2 transform -translate-x-1/2"></div>
 
         {/* Step 1 */}
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative bg-black border border-lime-400 rounded-xl p-6 w-full md:w-[400px] mb-12 md:ml-[calc(50%+20px)] md:mr-8"
+          className="relative bg-black border border-[#99FF33] rounded-xl p-6 w-full md:w-[400px] mb-12 md:ml-[calc(50%+20px)] md:mr-8"
         >
-          <h2 className="text-lime-400 font-bold text-xl mb-2">STEP 1</h2>
+          <h2 className="text-[#99FF33] font-bold text-xl mb-2">STEP 1</h2>
           <h3 className="text-2xl font-bold mb-2">SEO</h3>
           <p className="text-gray-400 text-sm">
             Enhance organic visibility to attract long-term, cost-effective traffic.
@@ -42,9 +42,9 @@ export default function MarketingRoadmap() {
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative bg-black border border-lime-400 rounded-xl p-6 w-full md:w-[400px] mb-12 md:ml-[-50%]"
+          className="relative bg-black border border-[#99FF33] rounded-xl p-6 w-full md:w-[400px] mb-12 md:ml-[-50%]"
         >
-          <h2 className="text-lime-400 font-bold text-xl mb-2">STEP 2</h2>
+          <h2 className="text-[#99FF33] font-bold text-xl mb-2">STEP 2</h2>
           <h3 className="text-2xl font-bold mb-2">WEB DESIGN</h3>
           <p className="text-gray-400 text-sm">
             Build a conversion-optimized site that boosts engagement and trust.
@@ -58,10 +58,9 @@ export default function MarketingRoadmap() {
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative bg-black border border-lime-400 rounded-xl p-6 w-full md:w-[400px] mb-12 md:ml-[calc(50%+20px)] md:mr-8"
-
+          className="relative bg-black border border-[#99FF33] rounded-xl p-6 w-full md:w-[400px] mb-12 md:ml-[calc(50%+20px)] md:mr-8"
         >
-          <h2 className="text-lime-400 font-bold text-xl mb-2">STEP 3</h2>
+          <h2 className="text-[#99FF33] font-bold text-xl mb-2">STEP 3</h2>
           <h3 className="text-2xl font-bold mb-2">EMAIL MARKETING</h3>
           <p className="text-gray-400 text-sm">
             Nurture leads with targeted campaigns and automated flows.
@@ -75,9 +74,9 @@ export default function MarketingRoadmap() {
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative bg-black border border-lime-400 rounded-xl p-6 w-full md:w-[400px] mb-12 md:ml-[-50%]"
+          className="relative bg-black border border-[#99FF33] rounded-xl p-6 w-full md:w-[400px] mb-12 md:ml-[-50%]"
         >
-          <h2 className="text-lime-400 font-bold text-xl mb-2">STEP 4</h2>
+          <h2 className="text-[#99FF33] font-bold text-xl mb-2">STEP 4</h2>
           <h3 className="text-2xl font-bold mb-2">GOOGLE ADS</h3>
           <p className="text-gray-400 text-sm">
             Drive immediate, high-intent traffic through search advertising.
@@ -91,10 +90,9 @@ export default function MarketingRoadmap() {
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative bg-black border border-lime-400 rounded-xl p-6 w-full md:w-[400px] mb-12 md:ml-[calc(50%+20px)] md:mr-8"
-
+          className="relative bg-black border border-[#99FF33] rounded-xl p-6 w-full md:w-[400px] mb-12 md:ml-[calc(50%+20px)] md:mr-8"
         >
-          <h2 className="text-lime-400 font-bold text-xl mb-2">STEP 5</h2>
+          <h2 className="text-[#99FF33] font-bold text-xl mb-2">STEP 5</h2>
           <h3 className="text-2xl font-bold mb-2">META ADS</h3>
           <p className="text-gray-400 text-sm">
             Boost brand awareness and engagement on Facebook & Instagram.
@@ -112,7 +110,7 @@ export default function MarketingRoadmap() {
         <p className="italic text-gray-400 mb-8">
           no sales-call BS, just a focused strategy session.
         </p>
-        <Button className="bg-lime-400 text-black font-bold text-lg px-8 py-6 rounded-full hover:bg-lime-500">
+        <Button className="bg-[#99FF33] text-black font-bold text-lg px-8 py-6 rounded-full hover:bg-[#b3ff66]">
           LET’S DO IT
         </Button>
       </div>

@@ -1,11 +1,11 @@
-// components/Navbar.tsx
 "use client";
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Button } from "@/components/ui/button";             // shadcn Button
+import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const navLinks = [
   { title: "FAQs", href: "/faqs" },
@@ -25,30 +25,40 @@ export default function Navbar() {
   };
 
   return (
-    <header className="bg-black text-white fixed w-full z-50">
-      <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        {/* Let's Chat */}
-        <Button
-          variant="outline"
-          className="text-green-400 border-green-400 cursor-pointer hover:bg-green-400 hover:text-black"
-          onClick={() => router.push("/chat")}
-        >
-          Let&apos;s Chat
-        </Button>
-
-        {/* Logo */}
-        <div className="text-2xl font-extrabold cursor-pointer text-green-500 select-none">
-          MARK SHARK®
+    <header className="bg-[#000000] text-white fixed w-full z-50">
+      <nav className="max-w-7xl mx-auto px-6 py-4 h-[80px] flex items-center justify-between relative">
+        {/* Left: Let's Chat Button */}
+        <div className="flex-shrink-0">
+          <Button
+            variant="default"
+            className="bg-[#99FF33] text-black hover:bg-[#85e62d]"
+            onClick={() => router.push("/chat")}
+          >
+            Let&apos;s Chat
+          </Button>
         </div>
 
-        {/* Hamburger */}
-        <button
-          className="p-2 cursor-pointer focus:outline-none"
-          onClick={() => setOpen(true)}
-          aria-label="Open menu"
-        >
-             <Menu size={24} className="text-green-400" />
-        </button>
+        {/* Center: Logo */}
+        <div className="absolute left-1/2 top-11/12 -translate-x-1/2 -translate-y-1/2 cursor-pointer select-none">
+          <Image
+            src="/images/logo.png"
+            alt="MarkShark Logo"
+            width={250}
+            height={200}
+            priority
+          />
+        </div>
+
+        {/* Right: Hamburger */}
+        <div className="flex-shrink-0">
+          <button
+            className="p-2 cursor-pointer focus:outline-none"
+            onClick={() => setOpen(true)}
+            aria-label="Open menu"
+          >
+            <Menu size={24} className="text-[#99FF33]" />
+          </button>
+        </div>
       </nav>
 
       {/* Mobile Full-Screen Menu */}
@@ -66,13 +76,13 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
               aria-label="Close menu"
             >
-              <X size={28} className="text-green-400 cursor-pointer" />
+              <X size={28} className="text-[#99FF33] cursor-pointer" />
             </button>
 
             {navLinks.map((link) => (
               <button
                 key={link.href}
-                className="text-xl uppercase tracking-wide cursor-pointer hover:text-green-400"
+                className="text-xl uppercase tracking-wide cursor-pointer hover:text-[#99FF33]"
                 onClick={() => handleNav(link.href)}
               >
                 {link.title}
@@ -97,13 +107,13 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
               aria-label="Close menu"
             >
-              <X size={24} className="text-green-400" />
+              <X size={24} className="text-[#99FF33]" />
             </button>
 
             {navLinks.map((link) => (
               <button
                 key={link.href}
-                className="text-lg hover:text-green-400 text-left"
+                className="text-lg hover:text-[#99FF33] text-left"
                 onClick={() => handleNav(link.href)}
               >
                 {link.title}
