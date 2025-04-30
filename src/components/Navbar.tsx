@@ -39,12 +39,14 @@ export default function Navbar() {
         </div>
 
         {/* Center: Logo */}
-        <div className="absolute left-1/2 top-11/12 -translate-x-1/2 -translate-y-1/2 cursor-pointer select-none">
+        <div className="absolute left-1/2 top-11/12 -translate-x-1/2 -translate-y-1/2 cursor-pointer select-none"
+        onClick={() => router.push("/")}
+        >
           <Image
             src="/images/logo.png"
             alt="MarkShark Logo"
             width={250}
-            height={200}
+            height={200} 
             priority
           />
         </div>
