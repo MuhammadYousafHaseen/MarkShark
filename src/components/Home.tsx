@@ -14,7 +14,7 @@ export default function Home() {
       <HeroSection />
       <MarketingSection />
       <MarketingRoadmap />
-      <VideoWithContactForm src="videos/seoGame.mp4" />
+      <VideoWithContactForm />
       <FaqsSection />
     
     </div>
