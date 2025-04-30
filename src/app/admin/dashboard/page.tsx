@@ -68,7 +68,7 @@ export default function AdminDashboard() {
   if (!session?.user?.isAdmin) return null;
 
   return (
-    <div className="min-h-screen bg-[#000000] text-white p-6">
+    <div className="min-h-screen bg-[#000000] text-white p-4">
       <motion.h1
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}

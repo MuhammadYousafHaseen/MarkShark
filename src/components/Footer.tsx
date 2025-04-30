@@ -13,7 +13,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand Section */}
           <div>
-            <h2 className="text-white text-2xl font-bold">Mark Shark</h2>
+            <h2 className="text-[#99FF33] text-2xl font-bold">Mark Shark</h2>
             <p className="mt-4">
               We create content that is impossible to ignore.
             </p>
@@ -21,7 +21,7 @@ export default function Footer() {
 
           {/* Navigation Links */}
           <div>
-            <h3 className="text-white text-xl font-semibold mb-4">Navigation</h3>
+            <h3 className="text-[#99FF33] text-xl font-semibold mb-4">Navigation</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/" className="hover:text-white transition">
@@ -53,7 +53,7 @@ export default function Footer() {
 
           {/* Social Media Links */}
           <div>
-            <h3 className="text-white text-xl font-semibold mb-4">Follow Us</h3>
+            <h3 className="text-[#99FF33] text-xl font-semibold mb-4">Follow Us</h3>
             <div className="flex space-x-4">
               <Link
                 href="https://twitter.com"
