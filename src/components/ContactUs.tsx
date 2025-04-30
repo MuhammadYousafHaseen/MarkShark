@@ -1,16 +1,43 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
+import axios from 'axios';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
 
-export default function ContactFormOnly() {
-  const handleSubmit = (e: React.FormEvent) => {
+export default function ContactForm() {
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // TODO: hook up your submission logic here
-    console.log('form submitted');
+    setLoading(true);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const name = formData.get('name') as string;
+    const email = formData.get('email') as string;
+    const message = formData.get('message') as string;
+
+    try {
+      const response = await axios.post('/api/messages/save-contact-message', {
+        name,
+        email,
+        message,
+      });
+
+      
+      alert(response.data.message || "Message sent successfully!");
+      form.reset();
+    } catch (error) {
+      console.error('Error sending message:', error);
+      alert(`Error sending message`);
+      
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -63,9 +90,10 @@ export default function ContactFormOnly() {
 
         <Button
           type="submit"
-          className="w-full bg-[#99FF33] text-black font-bold py-3 px-6 rounded-md hover:bg-[#88e62e] transition-colors"
+          disabled={loading}
+          className="w-full bg-[#99FF33] cursor-pointer text-black font-bold py-3 px-6 rounded-md hover:bg-[#88e62e] transition-colors disabled:opacity-50"
         >
-          Send Message
+          {loading ? 'Sending...' : 'Send Message'}
         </Button>
       </form>
     </div>

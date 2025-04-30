@@ -1,9 +1,9 @@
 import FaqsSection from "@/components/FaqSection";
 import HeroSection from "@/components/HeroSection";
 import MarketingRoadmap from "@/components/MarketingRoadMap";
-import MarketingSection from "@/components/MarketingSection";
+import ContactForm from "./ContactUs";
+import ReviewSection from "./ReviewSection";
 
-import VideoWithContactForm from "@/components/VideoAnimationSEOGame";
 
 
 
@@ -12,9 +12,9 @@ export default function Home() {
     <div>
      
       <HeroSection />
-      <MarketingSection />
+      <ReviewSection />
       <MarketingRoadmap />
-      <VideoWithContactForm />
+      <ContactForm />
       <FaqsSection />
     
     </div>

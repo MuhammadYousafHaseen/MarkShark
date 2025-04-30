@@ -20,7 +20,7 @@ const stats = [
   { label: "DELIVERED EMAILS", number: 1, suffix: "m" },
 ];
 
-export default function MarketingSection() {
+export default function ReviewSection() {
   const sectionRef = useRef<HTMLElement | null>(null);
   const [inView, setInView] = useState(false);
 
