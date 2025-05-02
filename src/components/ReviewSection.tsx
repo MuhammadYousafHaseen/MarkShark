@@ -16,8 +16,8 @@ const stats = [
   { label: "SUCCESSFUL GOOGLE CAMPAIGNS", number: 500 },
   { label: "Client Retention Rate", number: 98, isPercentage: true },
   { label: "SATISFIED CLIENTS", number: 100 },
-  { label: "REVENUE GENERATED", number: 10, suffix: "m" },
-  { label: "DELIVERED EMAILS", number: 1, suffix: "m" },
+  { label: "REVENUE GENERATED", number: 10, suffix: "M" },
+  { label: "DELIVERED EMAILS", number: 1, suffix: "M" },
 ];
 
 export default function ReviewSection() {

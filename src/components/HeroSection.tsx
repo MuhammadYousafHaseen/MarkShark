@@ -42,7 +42,7 @@ export default function HeroSection() {
             Curious how we do it?
           </p>
 
-          <Link href="/tell-me-how" passHref>
+          <Link href="/contact" passHref>
             <div
               className={`
                 inline-block mt-10
