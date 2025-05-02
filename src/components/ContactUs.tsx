@@ -41,11 +41,13 @@ export default function ContactForm() {
   };
 
   return (
+    
     <div className="w-full min-h-screen bg-black text-white flex items-center justify-center px-4 py-10">
       <form
         onSubmit={handleSubmit}
         className="w-full max-w-2xl space-y-6 bg-gray-900 p-8 rounded-xl shadow-lg"
       >
+        <h1 className='text-white font-extrabold text-4xl text-center sm:text-5xl md:text-6xl lg:text-7xl max-w-3xl leading-tight'>Contact Us</h1>
         <div>
           <Label htmlFor="name" className="text-white">
             Name
@@ -91,7 +93,7 @@ export default function ContactForm() {
         <Button
           type="submit"
           disabled={loading}
-          className="w-full bg-[#99FF33] cursor-pointer text-black font-bold py-3 px-6 rounded-md hover:bg-[#88e62e] transition-colors disabled:opacity-50"
+          className="w-auto text-center items-center bg-[#99FF33] cursor-pointer text-black font-bold py-3 px-6 rounded-md hover:bg-[#88e62e] transition-colors disabled:opacity-50"
         >
           {loading ? 'Sending...' : 'Send Message'}
         </Button>

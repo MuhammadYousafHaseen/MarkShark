@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Link from "next/link";
 import { Star } from "lucide-react";
@@ -16,43 +16,59 @@ export default function HeroSection() {
   return (
     <>
       {/* ===== HERO ===== */}
-      <section className="relative w-full bg-black flex items-center justify-center px-4 py-8">
-        <div className="relative w-full max-w-7xl h-[80vh] mx-auto bg-black rounded-3xl overflow-hidden">
-          <video
-            className="absolute inset-0 w-full h-full object-cover rounded-3xl"
-            src="/videos/heroSection.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-          />
-          <div className="absolute inset-0 bg-black/40 z-0 rounded-3xl"></div>
+      <section className="relative w-full bg-black flex items-center justify-center overflow-hidden">
+        {/* Video Container */}
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          src="/videos/heroSection.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
 
-          <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4 sm:px-6 md:px-10 z-10">
-            <h1 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl leading-tight max-w-3xl">
-              Grow Your Landscaping Business While We Handle the Marketing.
-            </h1>
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/50"></div>
 
-            <p className="mt-6 text-white text-base sm:text-lg md:text-xl max-w-2xl">
-              Our strategy doesn’t just get you clicks — it gets you clients.
-              <br className="hidden sm:inline" />
-              Curious how we do it?
-            </p>
+        {/* Content */}
+        <div className="relative z-10 flex flex-col items-center text-center px-4 py-20 sm:py-24 md:py-32 lg:py-40">
+          <h1 className="text-white font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl max-w-3xl leading-tight">
+            Grow Your Landscaping Business While We Handle the Marketing.
+          </h1>
 
-            <Link href="/tell-me-how" passHref>
-              <div className="inline-block mt-8 px-8 py-4 bg-[#99FF33] hover:bg-[#7ACC28] text-black font-semibold uppercase rounded-full shadow-lg transition">
-                Tell Me How
-              </div>
-            </Link>
+          <p className="mt-6 text-white text-lg sm:text-xl md:text-2xl max-w-2xl">
+            Our strategy doesn’t just get you clicks — it gets you clients.
+            <br className="hidden sm:inline" />
+            Curious how we do it?
+          </p>
 
-            <div className="flex items-center justify-center mt-4 space-x-1">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" />
-              ))}
-              <span className="ml-2 text-white text-sm">
-                4.75 ratings out of 368 reviews
-              </span>
+          <Link href="/tell-me-how" passHref>
+            <div
+              className={`
+                inline-block mt-10
+                px-8 py-4 sm:px-12 sm:py-5
+                md:px-16 md:py-6
+                bg-[#99FF33] hover:bg-[#7ACC28]
+                text-black font-extrabold  uppercase
+                text-2xl sm:text-3xl md:text-2xl
+                rounded-full shadow-xl transition
+              `}
+            >
+              Tell Me How
             </div>
+          </Link>
+
+          <div className="flex items-center justify-center mt-6 space-x-2">
+            {Array.from({ length: 5 }).map((_, i) => (
+              <Star
+                key={i}
+                className="w-6 h-6 text-yellow-400"
+                fill="currentColor"
+              />
+            ))}
+            <span className="ml-2 text-white text-base sm:text-lg">
+              4.75 ratings out of 368 reviews
+            </span>
           </div>
         </div>
       </section>
@@ -99,7 +115,6 @@ export default function HeroSection() {
             transform: translateX(-100%);
           }
         }
-
         .animate-marquee {
           animation: marquee 30s linear infinite;
         }

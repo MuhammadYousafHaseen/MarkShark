@@ -8,6 +8,7 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 
 const navLinks = [
+  { title: "Home", href: "/" },
   { title: "FAQs", href: "/faqs" },
   { title: "About Us", href: "/about" },
   { title: "Contact Us", href: "/contact" },
@@ -25,97 +26,69 @@ export default function Navbar() {
   };
 
   return (
-    <header className="bg-[#000000] text-white fixed w-full z-50">
-      <nav className="max-w-7xl mx-auto px-6 py-4 h-[80px] flex items-center justify-between relative">
-        {/* Left: Let's Chat Button */}
-        <div className="flex-shrink-0">
-          <Button
-            variant="default"
-            className="bg-[#99FF33] text-black hover:bg-[#85e62d]"
-            onClick={() => router.push("/chat")}
-          >
-            Let&apos;s Chat
-          </Button>
-        </div>
+    <>
+      <header className="bg-black text-white  fixed w-full z-50">
+        <nav className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center">
+          {/* Left: Let's Chat Button */}
+          <div className="flex-shrink-0">
+            <Button
+              variant="default"
+              className="bg-[#99FF33] cursor-pointer text-black hover:bg-[#85e62d] py-4 sm:py-6 px-8 sm:px-10 text-lg sm:text-xl font-bold"
+              onClick={() => router.push("/contact")}
+            >
+              Let&apos;s Chat
+            </Button>
+          </div>
 
-        {/* Center: Logo */}
-        <div className="absolute left-1/2 top-11/12 -translate-x-1/2 -translate-y-1/2 cursor-pointer select-none"
-        onClick={() => router.push("/")}
-        >
-          <Image
-            src="/images/logo.png"
-            alt="MarkShark Logo"
-            width={250}
-            height={200} 
-            priority
-          />
-        </div>
+          {/* Center: Logo */}
+          <div className="flex-1 flex justify-center items-center cursor-pointer" onClick={() => router.push("/")}>  
+            <div className="w-52 sm:w-56 md:w-64 lg:w-72 xl:w-80 mt-12 md:mt-16 lg:mt-20 h-auto">
+              <Image
+                src="/images/logo.png"
+                alt="MarkShark Logo"
+                width={1920}
+                height={1080}
+                className="w-full h-auto object-contain"
+                priority
+              />
+            </div>
+          </div>
 
-        {/* Right: Hamburger */}
-        <div className="flex-shrink-0">
-          <button
-            className="p-2 cursor-pointer focus:outline-none"
-            onClick={() => setOpen(true)}
-            aria-label="Open menu"
-          >
-            <Menu size={24} className="text-[#99FF33]" />
-          </button>
-        </div>
-      </nav>
+          {/* Right: Hamburger */}
+          <div className="flex-shrink-0">
+            <button
+              className="p-2 sm:p-3 lg:p-4 text-2xl sm:text-3xl lg:text-4xl cursor-pointer focus:outline-none"
+              onClick={() => setOpen(true)}
+              aria-label="Open menu"
+            >
+              <Menu size={40} className="text-[#99FF33]" />
+            </button>
+          </div>
+        </nav>
+      </header>
 
-      {/* Mobile Full-Screen Menu */}
+      {/* Full-Screen Menu Overlay (all screen sizes) */}
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed inset-0 bg-black flex flex-col items-center justify-center space-y-6 md:hidden"
+            className="fixed inset-0 z-60 bg-black text-white bg-opacity-95 flex flex-col items-center justify-center space-y-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.25 }}
-          >
-            <button
-              className="absolute top-5 right-5"
-              onClick={() => setOpen(false)}
-              aria-label="Close menu"
-            >
-              <X size={28} className="text-[#99FF33] cursor-pointer" />
-            </button>
-
-            {navLinks.map((link) => (
-              <button
-                key={link.href}
-                className="text-xl uppercase tracking-wide cursor-pointer hover:text-[#99FF33]"
-                onClick={() => handleNav(link.href)}
-              >
-                {link.title}
-              </button>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Desktop Left-Side Drawer */}
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            className="fixed inset-y-0 left-0 w-64 bg-black p-8 hidden md:flex flex-col space-y-6"
-            initial={{ x: -300, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            exit={{ x: -300, opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
             <button
-              className="self-end mb-4"
+              className="absolute top-5 right-5 p-3 sm:p-4"
               onClick={() => setOpen(false)}
               aria-label="Close menu"
             >
-              <X size={24} className="text-[#99FF33]" />
+              <X size={36} className="text-[#99FF33] cursor-pointer" />
             </button>
 
             {navLinks.map((link) => (
               <button
                 key={link.href}
-                className="text-lg hover:text-[#99FF33] text-left"
+                className="text-4xl sm:text-5xl md:text-6xl font-extrabold uppercase tracking-wide cursor-pointer hover:text-[#99FF33]"
                 onClick={() => handleNav(link.href)}
               >
                 {link.title}
@@ -124,6 +97,6 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+    </>
   );
 }

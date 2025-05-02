@@ -63,7 +63,7 @@ export default function AuthForms() {
   };
 
   return (
-    <div className="min-h-screen bg-[#000000] flex items-center justify-center px-4 py-10">
+    <div className="min-h-screen bg-[#000000]  flex items-center justify-center px-4 py-10">
       <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8">
         <motion.form
           onSubmit={handleRegister}

@@ -8,7 +8,7 @@ export default function MarketingRoadmap() {
     <div className="w-full min-h-screen bg-black text-white flex flex-col items-center justify-center p-6 relative overflow-hidden">
       {/* Top Heading */}
       <div className="text-center max-w-3xl">
-        <h1 className="text-3xl md:text-5xl font-bold leading-tight">
+        <h1 className="text-white font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
           Marketing That Pays: No Budget Burn, Just Real Growth
         </h1>
         <p className="mt-6 text-lg md:text-xl text-gray-300">
@@ -110,7 +110,13 @@ export default function MarketingRoadmap() {
         <p className="italic text-gray-400 mb-8">
           no sales-call BS, just a focused strategy session.
         </p>
-        <Button className="bg-[#99FF33] text-black font-bold text-lg px-8 py-6 rounded-full hover:bg-[#b3ff66]">
+        <Button className=" mt-10
+                px-8 py-4 sm:px-12 sm:py-5
+                md:px-16 md:py-6
+                bg-[#99FF33] hover:bg-[#7ACC28]
+                text-black font-extrabold  uppercase
+                text-2xl sm:text-3xl md:text-2xl text-center align-middle
+                rounded-full shadow-xl transition">
           LET’S DO IT
         </Button>
       </div>

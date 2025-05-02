@@ -47,9 +47,9 @@ export default function ReviewSection() {
     >
       {/* ... your left & image sections unchanged ... */}
 
-      <div className="mt-24 text-center">
-        <h3 className="text-2xl md:text-3xl font-bold text-white">
-          We are just an agency with
+      <div className="text-center">
+        <h3 className="text-white font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl  leading-tight">
+          Our Track Record. Your Confidence.
         </h3>
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {stats.map((stat, i) => (
