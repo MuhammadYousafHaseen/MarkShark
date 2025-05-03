@@ -4,7 +4,7 @@ import User from "@/models/user.model";
 import dbConnect from "@/lib/dbConnect";
 import { NextResponse } from "next/server";
 
-export const GET = async () => {
+export async function GET() {
   const session = await getServerSession(authOptions);
 
   if (!session || !session.user || !session.user.isAdmin) {

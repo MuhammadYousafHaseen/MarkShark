@@ -6,28 +6,37 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
-
-const navLinks = [
-  { title: "Home", href: "/" },
-  { title: "FAQs", href: "/faqs" },
-  { title: "About Us", href: "/about" },
-  { title: "Contact Us", href: "/contact" },
-  { title: "Services", href: "/services" },
-  { title: "Register", href: "/register-auth" },
-];
+import { useSession } from "next-auth/react";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const router = useRouter();
+  const { data: session} = useSession();
 
   const handleNav = (href: string) => {
     setOpen(false);
     router.push(href);
   };
 
+  // Define the base navigation links
+  const baseNavLinks = [
+    { title: "Home", href: "/" },
+    { title: "FAQs", href: "/faqs" },
+    { title: "About Us", href: "/about" },
+    { title: "Contact Us", href: "/contact" },
+    { title: "Services", href: "/services" },
+    { title: "Register", href: "/register-auth" },
+  ];
+
+  // Conditionally add the Admin Dashboard link
+  const navLinks = [...baseNavLinks];
+  if (session?.user?.isAdmin) {
+    navLinks.push({ title: "Admin Dashboard", href: "/admin/dashboard" });
+  }
+
   return (
     <>
-      <header className="bg-black text-white  fixed w-full z-50">
+      <header className="bg-black text-white fixed w-full z-50">
         <nav className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center">
           {/* Left: Let's Chat Button */}
           <div className="flex-shrink-0">
@@ -41,8 +50,11 @@ export default function Navbar() {
           </div>
 
           {/* Center: Logo */}
-          <div className="flex-1 flex justify-center items-center cursor-pointer" onClick={() => router.push("/")}>  
-            <div className="w-52 sm:w-56 md:w-64 lg:w-72 xl:w-80 mt-12 md:mt-16 lg:mt-20 h-auto">
+          <div
+            className="flex-1 flex justify-center items-center cursor-pointer"
+            onClick={() => router.push("/")}
+          >
+            <div className="w-56 sm:w-56 md:w-64 lg:w-72 xl:w-80 mt-16 md:mt-16 lg:mt-20 h-auto">
               <Image
                 src="/images/logo.png"
                 alt="MarkShark Logo"

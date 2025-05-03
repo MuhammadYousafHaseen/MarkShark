@@ -38,7 +38,7 @@ export default function TestimonialsCarousel() {
               {[...row, ...row].map((t, i) => (
                 <Card
                   key={i}
-                  className="min-w-[500px] bg-[#1E1E1E] hover:border-green-400 hover:border-2 transition-transform duration-300"
+                  className="min-w-[500px] bg-[#1E1E1E] hover:border-[#99FF33] hover:border-2 transition-transform duration-300"
                 >
                   <CardContent className="flex flex-col items-center text-center p-6 space-y-4">
                     <div className="w-16 h-16 relative">

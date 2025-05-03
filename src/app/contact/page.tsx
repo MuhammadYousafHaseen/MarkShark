@@ -1,10 +1,11 @@
-import ContactForm from '@/components/ContactUs'
+
+import MeetingBooking from '@/components/MeetingBooking'
 import React from 'react'
 
 function Contact() {
   return (
     <div>
-      <ContactForm />
+     <MeetingBooking />
     </div>
   )
 }
