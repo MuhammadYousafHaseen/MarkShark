@@ -192,7 +192,7 @@ export default function MeetingBooking() {
                 value={form.reason}
                 onChange={handleChange}
                 rows={4}
-                className="w-full p-3 rounded-lg bg-gradient-to-r from-gray-800 to-gray-900 text-white focus:ring-green-500 focus:ring-2"
+                className="w-full p-3 rounded-lg resize-none bg-gradient-to-r from-gray-800 to-gray-900 text-white focus:ring-green-500 focus:ring-2"
                 required
               />
             </motion.div>

@@ -42,7 +42,7 @@ export default function ContactForm() {
 
   return (
     
-    <div className="w-full min-h-screen bg-black text-white flex items-center justify-center px-4 py-10">
+    <div className="w-full min-h-screen bg-black text-white flex items-center justify-center px-4 py-2 md:py-0">
       <form
         onSubmit={handleSubmit}
         className="w-full max-w-2xl space-y-6 bg-gray-900 p-8 rounded-xl shadow-lg"
@@ -86,7 +86,7 @@ export default function ContactForm() {
             rows={5}
             placeholder="Your message..."
             required
-            className="mt-1 bg-gray-800 text-white placeholder-gray-400 border border-gray-700 focus:border-[#99FF33] focus:ring-[#99FF33] h-40"
+            className="mt-1 bg-gray-800 resize-none text-white placeholder-gray-400 border border-gray-700 focus:border-[#99FF33] focus:ring-[#99FF33] h-40"
           />
         </div>
 

@@ -3,6 +3,11 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Hide ShadCN default Accordion arrow */
+/* Hide only the ShadCN AccordionTrigger default arrow */
+
+
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
