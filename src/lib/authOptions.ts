@@ -10,6 +10,7 @@ interface Credentials {
   password: string;
 }
 
+
 export const authOptions: AuthOptions = {
   providers: [
     CredentialsProvider({

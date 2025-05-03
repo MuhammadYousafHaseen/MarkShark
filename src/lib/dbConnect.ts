@@ -13,7 +13,10 @@ async function dbConnect(): Promise<void> {
     }
 
     try {
-        const db = await mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/markshark' )
+      
+          
+          const db = await mongoose.connect(process.env.MONGODB_URI as string);
+          
         
         connection.isConnected = db.connections[0].readyState
 
