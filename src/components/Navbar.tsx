@@ -11,7 +11,7 @@ import { useSession } from "next-auth/react";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const router = useRouter();
-  const { data: session} = useSession();
+  const { data: session } = useSession();
 
   const handleNav = (href: string) => {
     setOpen(false);
@@ -37,12 +37,12 @@ export default function Navbar() {
   return (
     <>
       <header className="bg-black text-white fixed w-full z-50">
-        <nav className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center">
+        <nav className="w-full mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           {/* Left: Let's Chat Button */}
           <div className="flex-shrink-0">
             <Button
               variant="default"
-              className="bg-[#99FF33] cursor-pointer text-black hover:bg-[#85e62d] py-4 sm:py-6 px-8 sm:px-10 text-lg sm:text-xl font-bold"
+              className="bg-[#99FF33] text-black hover:bg-[#85e62d] p-0 m-0 px-1 sm:px-2 text-sm md:py-6 md:px-8 sm:text-base md:text-xl font-semibold md:font-bold"
               onClick={() => router.push("/contact")}
             >
               Let&apos;s Chat
@@ -51,10 +51,10 @@ export default function Navbar() {
 
           {/* Center: Logo */}
           <div
-            className="flex-1 flex justify-center items-center cursor-pointer"
+            className="flex-shrink-0 cursor-pointer"
             onClick={() => router.push("/")}
           >
-            <div className="w-56 sm:w-56 md:w-64 lg:w-72 xl:w-80 mt-16 md:mt-16 lg:mt-20 h-auto">
+            <div className="w-40 sm:w-44 md:w-48 mt-10 md:mt-12 lg:w-52 xl:w-60 h-auto">
               <Image
                 src="/images/logo.png"
                 alt="MarkShark Logo"
@@ -69,14 +69,15 @@ export default function Navbar() {
           {/* Right: Hamburger */}
           <div className="flex-shrink-0">
             <button
-              className="p-2 sm:p-3 lg:p-4 text-2xl sm:text-3xl lg:text-4xl cursor-pointer focus:outline-none"
+              className="p-0 sm:p-2 lg:p-4 cursor-pointer focus:outline-none"
               onClick={() => setOpen(true)}
               aria-label="Open menu"
             >
-              <Menu size={40} className="text-[#99FF33]" />
+              <Menu size={30} className="text-[#99FF33]" />
             </button>
           </div>
         </nav>
+
       </header>
 
       {/* Full-Screen Menu Overlay (all screen sizes) */}
