@@ -54,7 +54,7 @@ export default function Navbar() {
             className="flex-shrink-0 cursor-pointer"
             onClick={() => router.push("/")}
           >
-            <div className="w-48 sm:w-56 md:w-64 mt-12 sm:mt-12 md:mt-16 m-0 p-0 lg:w-52 xl:w-60 h-auto">
+            <div className="w-48 sm:w-56 md:w-64 lg:w-64 mt-12 sm:mt-12 md:mt-20 mr-6 md:mr-16 m-0 p-0 xl:w-72 h-auto">
               <Image
                 src="/images/logo.png"
                 alt="MarkShark Logo"
@@ -65,7 +65,6 @@ export default function Navbar() {
               />
             </div>
           </div>
-
           {/* Right: Hamburger */}
           <div className="flex-shrink-0">
             <button
