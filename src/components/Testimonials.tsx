@@ -50,8 +50,8 @@ export default function TestimonialsCarousel() {
                       />
                     </div>
                     <p className="text-gray-300 text-sm">“{t.text}”</p>
-                    <h3 className="text-white font-semibold">{t.name}</h3>
-                    <span className="text-green-400 text-xs uppercase">
+                    <h3 className="text-[#99FF33] font-semibold">{t.name}</h3>
+                    <span className="text-[#99FF33] text-xs uppercase">
                       {t.title}
                     </span>
                   </CardContent>
