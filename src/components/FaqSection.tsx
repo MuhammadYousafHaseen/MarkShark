@@ -33,7 +33,7 @@ export default function FaqsSection() {
               value={faq.question}
               className="border border-gray-700 rounded-lg overflow-hidden"
             >
-              <AccordionTrigger className="flex justify-between items-center p-4 font-medium text-left text-lg hover:bg-[#1E1E1E] transition rounded-lg">
+              <AccordionTrigger className="flex justify-between cursor-pointer items-center p-4 font-medium text-left text-lg hover:bg-[#1E1E1E] transition rounded-lg">
                 <span>{faq.question}</span>
                 {/* {openItem === faq.question ? (
                   <ChevronUp className="text-gray-300 cursor-pointer align-middle" size={24} />
