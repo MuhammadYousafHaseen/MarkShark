@@ -1,36 +1,121 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MarkShark 🦈
 
-## Getting Started
+Welcome to **MarkShark**, an intelligent digital platform designed for efficient educational assessment and management. It enables teachers to evaluate students' papers, mark answers, maintain records, and enhance the overall examination experience digitally.
 
-First, run the development server:
+🌐 Live Website: https://markshark.co
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 📁 Project Directory Structure
+
+```
+MarkShark/
+├── app/                   # Main Next.js App Router
+│   ├── api/               # API routes
+│   ├── components/        # Reusable components
+│   ├── dashboard/         # Dashboard pages
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Main landing page
+├── lib/                   # Utility functions and helpers
+├── models/                # Mongoose models
+│   ├── meeting.model.ts
+│   └── user.model.ts
+├── pages/api/             # Next.js API routes
+│   ├── meeting/           # Meeting endpoints
+│   ├── messages/          # Message endpoints
+│   └── admin/             # Admin delete endpoints
+├── public/                # Public assets (images, video, favicon)
+├── styles/                # Global CSS and Tailwind config
+├── .env.example           # Environment variable sample
+├── next.config.js         # Next.js configuration
+├── tsconfig.json          # TypeScript configuration
+├── package.json           # Project dependencies and scripts
+└── README.md              # Project documentation
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Technologies & Dependencies
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Framework**: Next.js
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS, shadcn/ui
+- **Icons**: Lucide-React
+- **Animations**: Framer Motion
+- **Authentication**: next-auth
+- **Database**: MongoDB with Mongoose
+- **HTTP Client**: Axios
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## ⚙️ Environment Variables
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Create a `.env.local` file and add the following variables:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+MONGODB_URI=your_mongo_connection_string
+NEXTAUTH_SECRET=your_auth_secret
+NEXTAUTH_URL=http://localhost:3000
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚀 Available Scripts
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm run start
+
+# Export static site
+npm run export
+
+# Lint & type-check
+npm run lint
+```
+
+---
+
+## 📤 Deployment
+
+### Vercel
+
+1. Push your code to GitHub.
+2. Import the repo in Vercel.
+3. Add the environment variables in Vercel settings.
+4. Deploy and enjoy!
+
+### Static Export
+
+```bash
+npm run build
+npm run export
+```
+
+Upload the `out/` folder contents to any static host.
+
+---
+
+## 🤝 Contribution
+
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature/your-feature`
+3. Make your changes and commit: `git commit -m "Add feature"`
+4. Push to branch: `git push origin feature/your-feature`
+5. Open a Pull Request.
+
+---
+
+## 🗣️ Contact
+
+**Author**: Muhammad Yousaf Haseen  
+**Website**: https://markshark.co  
+**Email**: muhammadyousaf71eb@gmail.com  
