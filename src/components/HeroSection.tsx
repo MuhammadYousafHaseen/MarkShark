@@ -35,10 +35,10 @@ export default function HeroSection() {
 {/* Content */}
 <div className="relative z-10 flex flex-col items-center text-center px-4 py-20 sm:py-24 md:py-28 lg:py-32">
   <h1 className="text-white font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl max-w-3xl leading-tight">
-    Grow Your Landscaping Business While We Handle the Marketing.
+  Double Your Local Leads in 90 Day Guaranteed
   </h1>
   <p className="mt-6 text-white text-lg sm:text-xl md:text-2xl max-w-2xl">
-    Our strategy doesn’t just get you clicks — it gets you clients.
+  We partner with only a select few local businesses each month, deploying our battle-tested marketing system to deliver measurable growth—or we stay on until you do for free.
     <br className="hidden sm:inline" />
     Curious how we do it?
   </p>

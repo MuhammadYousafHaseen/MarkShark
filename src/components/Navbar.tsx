@@ -100,7 +100,7 @@ export default function Navbar() {
             {navLinks.map((link) => (
               <button
                 key={link.href}
-                className="text-4xl sm:text-5xl md:text-6xl font-extrabold uppercase tracking-wide cursor-pointer hover:text-[#99FF33]"
+                className="text-5xl sm:text-6xl md:text-7xl font-extrabold uppercase tracking-wide cursor-pointer hover:text-[#99FF33]"
                 onClick={() => handleNav(link.href)}
               >
                 {link.title}

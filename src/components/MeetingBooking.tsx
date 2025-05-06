@@ -45,7 +45,7 @@ export default function MeetingBooking() {
     setForm(f => ({ ...f, tz }));
   }, []);
 
-  const slots = ['12:00 PM', '12:30 PM', '1:00 PM', '1:30 PM','2:00 PM', '2:30 PM'];
+  const slots = ['12:00 PM', '01:00 PM', '02:00 PM', '03:00 PM','04:00 PM', '05:00 PM','09:00 AM', '10:00 AM'];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
