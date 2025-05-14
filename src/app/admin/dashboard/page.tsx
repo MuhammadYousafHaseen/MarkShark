@@ -254,7 +254,7 @@ export default function AdminDashboard() {
                   {/* ✅ Show delete button only if user is NOT an admin */}
                   {!user.isAdmin && (
                     <Button
-                      className="mt-3 text-black font-semibold"
+                      className="mt-3 text-black cursor-pointer font-semibold"
                       style={{ backgroundColor: '#99FF33' }}
                       onClick={() => handleDelete('user', user._id)}
                     >
